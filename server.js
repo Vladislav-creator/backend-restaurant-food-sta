@@ -11,7 +11,7 @@ const  startServer = async () => {
           });
     }catch(error){
         console.log(error);
-        procecess.exit(1);
+        process.exit(1);
     }
 }
 
