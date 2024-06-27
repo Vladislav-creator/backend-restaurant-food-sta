@@ -2,7 +2,7 @@ import { Dish } from "../db/models/dishModel.js";
 
 export const getAllDishes = async (_, res) => {
   try {
-    const dishes = await Dish.find({}).sort({ level: 1 }); // Сортировка по уровню в возрастающем порядке
+    const dishes = await Dish.find({}); 
     res.status(200).json(dishes);
   } catch (error) {
     res.status(500).json({ message: "Server error" });
