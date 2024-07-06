@@ -3,7 +3,7 @@ import morgan from "morgan";
 import cors from "cors";
 import dotenv from "dotenv";
 import  dishesRouter  from "./routes/dishesRouter.js";
-
+import  cooksRouter  from "./routes/cooksRouter.js";
 
 dotenv.config();
 const app = express();
@@ -15,7 +15,7 @@ app.use(express.static("public"));
  
 
 app.use("/dishes", dishesRouter);
-
+app.use("/cooks", cooksRouter);
 
 app.use((_, res) => {
   res.status(404).json({ message: "Route not found" });
