@@ -7,7 +7,7 @@ import {
   updateAvatar,
   getProfile,
 } from "../controllers/usersControllers.js";
-import validateBody from "../helpers/validateBody.js";
+import validateBody from "../helpers/validatebody.js";
 import { loginSchema, registerSchema } from "../schemas/userSchemas.js";
 import { authenticate } from "../middlewares/authenticait.js";
 import { storage } from "../middlewares/upload.js";
