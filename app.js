@@ -4,7 +4,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import  dishesRouter  from "./routes/dishesRouter.js";
 import  cooksRouter  from "./routes/cooksRouter.js";
-
+import  usersRouter  from "./routes/usersRouter.js";
 dotenv.config();
 const app = express();
 
@@ -14,6 +14,9 @@ app.use(express.json());
 app.use(express.static("public"));
  
 
+ 
+
+app.use("/users", usersRouter);
 app.use("/dishes", dishesRouter);
 app.use("/cooks", cooksRouter);
 
